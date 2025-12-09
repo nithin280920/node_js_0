@@ -1,0 +1,13 @@
+{
+    "files": {
+        "node_test.js": {
+        "status": "modified"
+        },
+        "data.txt": {
+        "status": "modified"
+        },
+        "async.js": {
+        "status": "modified"
+        }
+    }
+}
