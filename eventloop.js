@@ -16,33 +16,33 @@
 // And if there are any process.nextTick() or Promise callbacks, they will be executed
 // before moving to the next phase of the event loop.
 
-const fs = require('fs');
+const fs = require("fs");
 
 const a = 12;
 
 //4th log
 Promise.resolve().then(() => {
-    console.log("Promise Resolved Message");
+  console.log("Promise Resolved Message");``
 });
 
 //6th log
 setImmediate(() => {
-    console.log("Immediate Message");
+  console.log("Immediate Message");
 });
 
 //5th log
-fs.readFile("data.txt", "utf8", (err, data)=>{
-    console.log("File Data: ", data);
-})
+fs.readFile("data.txt", "utf8", (err, data) => {
+  console.log("File Data: ", data);
+});
 
 //7th log
 setTimeout(() => {
-    console.log("Timeout Message after 3 seconds");
+  console.log("Timeout Message after 3 seconds");
 }, 1000);
 
 //1st log
 function fun(a) {
-    console.log("Function called with argument: ", a);
+  console.log("Function called with argument: ", a);
 }
 fun(a);
 
@@ -51,7 +51,5 @@ console.log("Synchronous Log Message");
 
 //3rd log
 process.nextTick(() => {
-    console.log("Next Tick Message");
+  console.log("Next Tick Message");
 });
-
-
